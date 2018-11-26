@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">FeedBares</string>
+    <string name="welcome">Bem Vindo ao FeedBares,\n\nO que vai fazer hoje?</string>
+    <string name="pub">Pub</string>
+    <string name="narguille">Narguile</string>
+    <string name="romantic">Romântico</string>
+    <string name="beach">Praiano</string>
+    <string name="college">Universitário</string>
 </resources>

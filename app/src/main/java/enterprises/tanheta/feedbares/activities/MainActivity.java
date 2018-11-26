@@ -5,17 +5,17 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
+import android.widget.EditText;
 
 import enterprises.tanheta.feedbares.R;
 
-public class LoginActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends Activity implements View.OnClickListener{
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
-        setOnClickListener(R.id.btn_login);
-        setOnClickListener(R.id.redirect_register);
+        setContentView(R.layout.activity_main);
+        setOnClickListener(R.id.search_name);
     }
 
     private void setOnClickListener(int id) {
@@ -25,14 +25,9 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-            case R.id.redirect_register: {
-                Intent intent = new Intent(this, RegisterActivity.class);
-                this.startActivity(intent);
-                break;
-            }
-            case R.id.btn_login: {
-                Intent intent = new Intent(this, MainActivity.class);
-                this.startActivity(intent);
+            case R.id.search_name: {
+                EditText editText = findViewById(R.id.search_name);
+                editText.setText("");
                 break;
             }
         }
