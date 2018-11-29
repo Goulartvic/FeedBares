@@ -9,7 +9,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginTop="48dp"
         android:layout_marginRight="32dp"
-        android:text="Name"
+        android:text="Usuário"
         android:textColor="@color/colorAccent" />
 
     <EditText
@@ -39,8 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="160dp"
         android:layout_marginRight="32dp"
+        android:layout_marginTop="160dp"
         android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -57,7 +57,7 @@
         android:textColor="@color/colorAccent" />
 
     <EditText
-        android:id="@+id/passwordInput"
+        android:id="@+id/register_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"

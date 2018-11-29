@@ -3,9 +3,11 @@ package enterprises.tanheta.feedbares.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pub {
+public class PubModel {
 
     private String name;
+
+    private String id;
 
     private String address;
 
@@ -17,7 +19,9 @@ public class Pub {
 
     private List<Commentary> comments;
 
-    public Pub(String name, String address, double rating, String photoUrl, String category) {
+    public PubModel() {}
+
+    public PubModel(String name, String address, double rating, String photoUrl, String category) {
         this.name = name;
         this.address = address;
         this.rating = rating;
@@ -56,5 +60,29 @@ public class Pub {
 
     public void setPhotoUrl(String photoUrl) {
         this.photoUrl = photoUrl;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public List<Commentary> getComments() {
+        return comments;
+    }
+
+    public void setComments(List<Commentary> comments) {
+        this.comments = comments;
     }
 }

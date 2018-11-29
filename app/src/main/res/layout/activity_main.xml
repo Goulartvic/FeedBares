@@ -57,13 +57,13 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="208dp">
+        android:layout_marginTop="208dp"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="32dp">
+            android:orientation="horizontal">
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/btn_pub"
@@ -71,6 +71,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="false"
                 android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
                 android:backgroundTint="@color/colorAccent"
                 android:text="@string/pub"
                 android:textColor="@android:color/white" />
@@ -120,57 +121,58 @@
         android:textSize="16sp" />
 
     <HorizontalScrollView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="320dp">
-
-    <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginLeft="32dp">
+        android:layout_marginTop="320dp"
+        android:scrollbars="none">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_romantic"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/colorAccent"
-            android:text="@string/romantic"
-            android:textColor="@android:color/white" />
+            android:orientation="horizontal">
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_family"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Familia"
-            android:textColor="@android:color/white" />
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_romantic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/romantic"
+                android:textColor="@android:color/white" />
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_soft"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/colorAccent"
-            android:text="Sofisticado"
-            android:textColor="@android:color/white" />
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_family"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Familia"
+                android:textColor="@android:color/white" />
 
-        <android.support.v7.widget.AppCompatButton
-            android:id="@+id/btn_buffet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/colorAccent"
-            android:text="buffet"
-            android:textColor="@android:color/white" />
-    </LinearLayout>
-</HorizontalScrollView>
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_soft"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Sofisticado"
+                android:textColor="@android:color/white" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_buffet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="buffet"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
     <TextView
         android:id="@+id/daily_pubs"

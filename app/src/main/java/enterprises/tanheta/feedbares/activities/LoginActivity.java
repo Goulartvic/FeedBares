@@ -6,6 +6,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.PatternMatcher;
 import android.support.annotation.Nullable;
 import android.util.Patterns;
@@ -46,42 +47,31 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
     private void doLogin() {
-        EditText emailEditText = findViewById(R.id.userInput);
-        String email = emailEditText.getText().toString();
+        EditText usernameEditText = findViewById(R.id.userInput);
+        final String username = usernameEditText.getText().toString();
         EditText passwordEditText = findViewById(R.id.passwordInput);
-        String password = passwordEditText.getText().toString();
-        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            loginError().show();
-        } else {
-            Handler handler = new Handler();
-            new Thread(requestLogin(email, password)).start();
-        }
-    }
-
-    private AlertDialog loginError() {
-        AlertDialog alert;
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Erro");
-        builder.setMessage("E-mail ou senha incorretos");
-        builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
-            public void onClick(DialogInterface arg0, int arg1) {
+        final String password = passwordEditText.getText().toString();
+        Handler handler = new Handler(Looper.myLooper());
+        handler.post(new Runnable() {
+            @Override
+            public void run() {
+                new Thread(requestLogin(username, password)).start();
             }
         });
-        alert = builder.create();
-        return alert;
     }
 
-    private Runnable requestLogin(final String email, final String password) {
+    private Runnable requestLogin(final String username, final String password) {
         final LoginService loginService = new LoginService();
-        final Intent intent = new Intent(this, MainActivity.class);
+        final Intent main = new Intent(this, MainActivity.class);
+        final Intent initial = new Intent(this, InitialActivity.class);
         final Activity thisActivity = this;
         return new Runnable() {
             @Override
             public void run() {
-                boolean loginSuccessful = loginService.doLogin(email, password);
-                if (loginSuccessful) {
-                    thisActivity.startActivity(intent);
-                } else loginError().show();
+                getMainLooper().prepare();
+                boolean loginSuccessful = loginService.doLogin(username, password);
+                if (loginSuccessful) thisActivity.startActivity(main);
+                else thisActivity.startActivity(initial);
             }
         };
     }
