@@ -27,7 +27,7 @@
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
         android:layout_marginTop="208dp"
-        android:text="Usuário"
+        android:text="E-mail"
         android:textColor="@color/colorAccent" />
 
     <EditText

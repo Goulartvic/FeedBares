@@ -3,13 +3,35 @@
     android:layout_width="match_parent" android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/register_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="32dp"
+        android:text="Name"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/register_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
         android:id="@+id/register_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="144dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="112dp"
-        android:text="Usuário"
+        android:text="E-mail"
         android:textColor="@color/colorAccent" />
 
     <EditText
@@ -17,8 +39,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
+        android:layout_marginTop="160dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="128dp"
         android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -30,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="208dp"
+        android:layout_marginTop="240dp"
         android:text="Senha"
         android:textColor="@color/colorAccent" />
 
@@ -40,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="224dp"
+        android:layout_marginTop="256dp"
         android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:inputType="textPassword"
@@ -52,7 +74,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="304dp"
+        android:layout_marginTop="336dp"
         android:text="Confirmar Senha"
         android:textColor="@color/colorAccent" />
 
@@ -62,7 +84,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="320dp"
+        android:layout_marginTop="352dp"
         android:backgroundTint="@color/colorAccent"
         android:ems="10"
         android:inputType="textPassword"
@@ -76,7 +98,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginTop="440dp"
         android:backgroundTint="@color/colorAccent"
         android:text="Registrar"
         android:textColor="@android:color/white" />
@@ -87,7 +109,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="32dp"
         android:layout_marginRight="32dp"
-        android:layout_marginTop="496dp"
+        android:layout_marginTop="504dp"
         android:backgroundTint="@color/colorAccent"
         android:clickable="true"
         android:focusable="true"

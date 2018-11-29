@@ -1,5 +1,8 @@
 package enterprises.tanheta.feedbares.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Pub {
 
     private String name;
@@ -10,11 +13,17 @@ public class Pub {
 
     private String photoUrl;
 
-    public Pub(String name, String address, double rating, String photoUrl) {
+    private String category;
+
+    private List<Commentary> comments;
+
+    public Pub(String name, String address, double rating, String photoUrl, String category) {
         this.name = name;
         this.address = address;
         this.rating = rating;
         this.photoUrl = photoUrl;
+        this.category = category;
+        this.comments = new ArrayList<>();
     }
 
     public String getName() {

@@ -22,7 +22,7 @@
         android:textSize="16sp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/search_btn"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignParentEnd="true"
@@ -42,71 +42,189 @@
         android:textColor="@color/colorAccent"
         android:textSize="16sp" />
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_pub"
+    <TextView
+        android:id="@+id/funny_pubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="184dp"
+        android:text="Bares divertidos:"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="208dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/pub"
-        android:textColor="@android:color/white" />
+        android:layout_marginTop="208dp">
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_beach"
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="32dp">
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_pub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/pub"
+                android:textColor="@android:color/white" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_beach"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/beach"
+                android:textColor="@android:color/white" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_narguile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/narguille"
+                android:textColor="@android:color/white" />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_college"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="@string/college"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/exclusive_pubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="296dp"
+        android:text="Bares reservados:"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+
+    <HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="320dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="32dp">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_romantic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorAccent"
+            android:text="@string/romantic"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_family"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Familia"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_soft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Sofisticado"
+            android:textColor="@android:color/white" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_buffet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_centerHorizontal="true"
+            android:backgroundTint="@color/colorAccent"
+            android:text="buffet"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</HorizontalScrollView>
+
+    <TextView
+        android:id="@+id/daily_pubs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="432dp"
+        android:text="Bares dia-a-dia:"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp" />
+
+    <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="272dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/beach"
-        android:textColor="@android:color/white" />
+        android:layout_marginTop="456dp">
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_narguile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="336dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/narguille"
-        android:textColor="@android:color/white" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="32dp">
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_college"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="336dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/college"
-        android:textColor="@android:color/white" />
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_foodtruck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Food Truck"
+                android:textColor="@android:color/white" />
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/btn_romantic"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginLeft="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginTop="400dp"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/romantic"
-        android:textColor="@android:color/white" />
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_junky"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Podrão"
+                android:textColor="@android:color/white" />
 
-
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_fastfood"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Fast food"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </HorizontalScrollView>
 
 </RelativeLayout>
