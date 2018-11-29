@@ -1,23 +1,22 @@
 package enterprises.tanheta.feedbares.activities;
 
 import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
-import android.os.PatternMatcher;
 import android.support.annotation.Nullable;
-import android.util.Patterns;
 import android.view.View;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import enterprises.tanheta.feedbares.R;
-import enterprises.tanheta.feedbares.service.LoginService;
+import enterprises.tanheta.feedbares.service.RequestService;
 
 public class LoginActivity extends Activity implements View.OnClickListener{
+
+    private SharedPreferences sharedPreferences;
+    private SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -25,6 +24,8 @@ public class LoginActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_login);
         setOnClickListener(R.id.btn_login);
         setOnClickListener(R.id.redirect_register);
+        sharedPreferences = getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE);
+        editor = sharedPreferences.edit();
     }
 
     private void setOnClickListener(int id) {
@@ -61,7 +62,7 @@ public class LoginActivity extends Activity implements View.OnClickListener{
     }
 
     private Runnable requestLogin(final String username, final String password) {
-        final LoginService loginService = new LoginService();
+        final RequestService requestService = new RequestService();
         final Intent main = new Intent(this, MainActivity.class);
         final Intent initial = new Intent(this, InitialActivity.class);
         final Activity thisActivity = this;
@@ -69,8 +70,11 @@ public class LoginActivity extends Activity implements View.OnClickListener{
             @Override
             public void run() {
                 getMainLooper().prepare();
-                boolean loginSuccessful = loginService.doLogin(username, password);
-                if (loginSuccessful) thisActivity.startActivity(main);
+                boolean loginSuccessful = requestService.doLogin(username, password);
+                if (loginSuccessful) {
+                    editor.putString("username", username);
+                    editor.commit();
+                    thisActivity.startActivity(main);}
                 else thisActivity.startActivity(initial);
             }
         };

@@ -17,7 +17,7 @@ public class PubModel {
 
     private String category;
 
-    private List<Commentary> comments;
+    private List<CommentModel> comments;
 
     public PubModel() {}
 
@@ -78,11 +78,11 @@ public class PubModel {
         this.id = id;
     }
 
-    public List<Commentary> getComments() {
+    public List<CommentModel> getComments() {
         return comments;
     }
 
-    public void setComments(List<Commentary> comments) {
+    public void setComments(List<CommentModel> comments) {
         this.comments = comments;
     }
 }

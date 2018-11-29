@@ -31,18 +31,14 @@ public class SearchActivity extends Activity {
     private RecyclerView searchRecyclerView;
     private String category;
 
-
-
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.search_layout);
         category = getIntent().getStringExtra("search");
         pubsList = new ArrayList<>();
-
         searchRecyclerView = findViewById(R.id.recycler_view_pubs);
         jsonRequest();
-
     }
 
     private void jsonRequest() {

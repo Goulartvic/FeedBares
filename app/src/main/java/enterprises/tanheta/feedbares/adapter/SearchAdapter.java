@@ -18,7 +18,6 @@ import java.util.List;
 
 import enterprises.tanheta.feedbares.R;
 import enterprises.tanheta.feedbares.activities.DetailPubActivity;
-import enterprises.tanheta.feedbares.activities.RegisterActivity;
 import enterprises.tanheta.feedbares.model.PubModel;
 
 public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.SearchViewHolder> {

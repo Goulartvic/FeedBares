@@ -13,7 +13,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import enterprises.tanheta.feedbares.R;
-import enterprises.tanheta.feedbares.service.LoginService;
+import enterprises.tanheta.feedbares.service.RequestService;
 
 public class RegisterActivity extends Activity implements View.OnClickListener {
 
@@ -78,7 +78,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     }
 
     private Runnable registerUser(final String email, final String password, final String username) {
-        final LoginService loginService = new LoginService();
+        final RequestService requestService = new RequestService();
         final Intent login = new Intent(this, LoginActivity.class);
         final Intent initial = new Intent(this, InitialActivity.class);
         final Activity thisActivity = this;
@@ -86,7 +86,7 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
             @Override
             public void run() {
                 getMainLooper().prepare();
-                boolean registerSuccessful = loginService.registerUser(username, password, email);
+                boolean registerSuccessful = requestService.registerUser(username, password, email);
                 if (registerSuccessful) thisActivity.startActivity(login);
                 else thisActivity.startActivity(initial);
             }

@@ -7,14 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="160dp"
     android:layout_margin="5dp"
-    android:maxHeight="250dp">
+    android:maxHeight="250dp"
+    android:backgroundTint="@android:color/white">
 
     <RelativeLayout
         android:id="@+id/comment_layout"
         android:layout_width="match_parent"
         android:layout_height="144dp"
         android:layout_margin="10dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@android:color/white">
 
         <TextView
             android:id="@+id/user_comment"
@@ -22,7 +24,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:textSize="16sp"
-            tools:text="Nome" />
+            tools:text="Nome"
+            android:textColor="@color/colorAccent"/>
 
         <TextView
             android:id="@+id/comment"
@@ -32,7 +35,8 @@
             android:layout_below="@+id/user_comment"
             android:layout_marginTop="32dp"
             android:textSize="16sp"
-            tools:text="Comentário" />
+            tools:text="Comentário"
+            android:textColor="@color/colorAccent"/>
 
 
     </RelativeLayout>

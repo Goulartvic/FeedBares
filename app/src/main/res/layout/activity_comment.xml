@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginRight="32dp"
+        android:text="Avaliação"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"/>
+
+
+
+    <TextView
+        android:id="@+id/rating_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="144dp"
+        android:layout_marginRight="32dp"
+        android:text="Nota:"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/rating_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="160dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/do_comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="240dp"
+        android:text="Comentário:"
+        android:textColor="@color/colorAccent" />
+
+    <EditText
+        android:id="@+id/do_comment_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="256dp"
+        android:backgroundTint="@color/colorAccent"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorAccent" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/submit_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="360dp"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Submeter"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/redirect_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="456dp"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="Cancelar"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent" />
+
+</RelativeLayout>
